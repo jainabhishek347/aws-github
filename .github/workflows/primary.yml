@@ -17,6 +17,7 @@ jobs:
       - name: Install Pip Dependencies for CI
         run: |
           pip3 install pytest
+          pip3 install pandas
       - name: Configure AWS credentials
         id: creds
         uses: aws-actions/configure-aws-credentials@v1
