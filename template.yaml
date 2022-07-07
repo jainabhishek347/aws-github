@@ -61,7 +61,7 @@ Resources:
   ETLLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app.lambda_handler
+      Handler: etl.lambda_handler
       Runtime: python3.8
       CodeUri: ./lambdas/etl
       Description: ETL pipeline
