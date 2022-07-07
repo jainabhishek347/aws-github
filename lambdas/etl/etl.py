@@ -17,7 +17,6 @@ FIELDNAMES =['timestamp','store','customer_name',
 FILENAME = 'chesterfield.csv'
 
 
-
 def csv_to_df(DATA):
     
     # DATA = pd.read_csv(FILENAME, names = FIELDNAMES)
