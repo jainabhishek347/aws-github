@@ -58,6 +58,15 @@ Resources:
       Description: Add
       AutoPublishAlias: live
 
+  ETLLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: add.lambda_handlers
+      Runtime: python3.8
+      CodeUri: ./lambdas/etl
+      Description: ETL pipeline
+      AutoPublishAlias: live
+
   CleanInputLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
