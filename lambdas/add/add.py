@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT-0
 
 import json
+import pandas
 
 def lambda_handler(event, context):
    print(event)
