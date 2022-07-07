@@ -8,7 +8,15 @@ States:
             FunctionName: ${CleanInputLambdaFunction}
             Payload:
                 input.$: $
-        Next: Multiply
+        Next: ETLInput
+    ETLInput:
+        Type: Task
+        Resource: 'arn:aws:states:::lambda:invoke'
+        Parameters:
+            FunctionName: ${ETLLambdaFunction}
+            Payload:
+                input.$: $
+        Next: Multiply    
     Multiply:
         Type: Task
         Resource: 'arn:aws:states:::lambda:invoke'

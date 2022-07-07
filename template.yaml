@@ -114,6 +114,7 @@ Resources:
         DivideLambdaFunction: !Ref DivideLambdaFunction
         MultiplyLambdaFunction: !Ref MultiplyLambdaFunction
         SubtractLambdaFunction: !Ref SubtractLambdaFunction
+        ETLLambdaFunction: !Ref ETLLambdaFunction
       Role: !GetAtt StateMachineRole.Arn
 
   StateMachineRole:
