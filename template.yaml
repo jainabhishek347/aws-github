@@ -7,6 +7,16 @@ Parameters:
   Name:
     Type: String
     Description: The name of the API to create, also used as the stack name.
+  Stage:
+    Type: String
+    Description: The name for a project pipeline stage, such as Staging or Prod, for which resources are provisioned and deployed.
+    Default: 'dev'  
+
+Globals:
+  Function:
+    Timeout: 10
+    Layers:
+      - !Ref CommonLayer  
 
 Resources:
 
@@ -144,3 +154,12 @@ Resources:
             Action:
               - lambda:InvokeFunction
             Resource: '*'
+
+  CommonLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: layers/common_layer/
+      CompatibleRuntimes:
+        - python3.8
+    Metadata:
+      BuildMethod: python3.8
