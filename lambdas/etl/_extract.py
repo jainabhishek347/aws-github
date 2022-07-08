@@ -2,7 +2,7 @@ import logging
 import hashlib
 import psycopg2
 import pandas as pd
-from utils.db_utils import get_db_connection
+from db_utils import get_db_connection
 
 logger = logging.getLogger()
 

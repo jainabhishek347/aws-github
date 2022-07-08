@@ -2,7 +2,7 @@ import psycopg2
 import numpy as np
 import psycopg2.extras as extras
 
-from .extract import *
+from extract import *
 
 def basket_df(data):
     basket_df = create_basket_df()

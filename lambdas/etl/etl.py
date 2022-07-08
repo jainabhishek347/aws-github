@@ -6,7 +6,7 @@ import psycopg2
 import numpy as np
 import psycopg2.extras as extras
 
-from etl_scripts import extract, load_db, load_basket, table_script
+import extract, load_db, load_basket, table_script
 from db_utils import get_db_connection
 
 LOGGER = logging.getLogger()
